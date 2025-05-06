@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "guru_knowledge_api",
+  "name_for_human": "Guru Knowledge Plugin",
+  "description_for_model": "Provides internal knowledge from Guru.",
+  "description_for_human": "Ask internal knowledge questions and get Guru answers.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://<your-username>.github.io/guru-plugin/openapi.yaml"
+  },
+  "logo_url": "https://<your-username>.github.io/guru-plugin/logo.png",
+  "contact_email": "csherin@getguru.com",
+  "legal_info_url": "https://example.com/legal"
+}
