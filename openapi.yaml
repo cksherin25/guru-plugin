@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info:
+  title: Guru Plugin
+  version: '1.0'
+servers:
+  - url: https://4e1fe55d-c971-4d4f-97a8-e812c89882f8-00-5pvatylk7v0q.picard.replit.dev/
+paths:
+  /ask:
+    post:
+      summary: Ask a question and get an answer from Guru
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+      responses:
+        '200':
+          description: Answer from Guru
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: object
