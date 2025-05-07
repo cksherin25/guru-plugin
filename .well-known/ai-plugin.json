@@ -1,17 +1,18 @@
 {
   "schema_version": "v1",
-  "name_for_model": "guru_knowledge_api",
-  "name_for_human": "Guru Knowledge Plugin",
-  "description_for_model": "Provides internal knowledge from Guru.",
-  "description_for_human": "Ask internal knowledge questions and get Guru answers.",
+  "name_for_model": "guru_gpt",
+  "name_for_human": "GuruGPT",
+  "description_for_model": "Use this tool to retrieve answers from the Guru knowledge base via the /ask API. Always provide accurate and sourced information.",
+  "description_for_human": "Ask questions and get sourced answers directly from the Guru knowledge base.",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "openapi",
-    "url": "https://cksherin25.github.io/guru-plugin/openapi.yaml"
+    "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/.well-known/openapi.yaml",
+    "is_user_authenticated": false
   },
-  "logo_url": "https://<your-username>.github.io/guru-plugin/logo.png",
-  "contact_email": "csherin@getguru.com",
+  "logo_url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/.well-known/logo.png",
+  "contact_email": "you@example.com",
   "legal_info_url": "https://example.com/legal"
 }
