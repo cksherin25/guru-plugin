@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/.well-known/openapi.yaml",
+    "url": "https://cksherin25.github.io/guru-plugin/openapi.yaml",
     "is_user_authenticated": false
   },
   "logo_url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/.well-known/logo.png",
