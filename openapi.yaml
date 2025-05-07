@@ -1,12 +1,18 @@
 openapi: 3.1.0
 info:
-  title: Ask API
+  title: Guru Plugin API
   version: 1.0.0
+  description: An API to interact with the Guru plugin hosted on Replit.
+
+servers:
+  - url: https://guru-plugin-api-csherin.replit.app
+    description: Replit-hosted Guru Plugin API
+
 paths:
   /ask:
     post:
-      operationId: askSomething
-      summary: Ask a question to the system
+      operationId: askGuru
+      summary: Submit a question to the Guru plugin
       requestBody:
         required: true
         content:
@@ -16,9 +22,11 @@ paths:
               properties:
                 question:
                   type: string
+              required:
+                - question
       responses:
         '200':
-          description: Answer from the system
+          description: Answer from the Guru plugin
           content:
             application/json:
               schema:
