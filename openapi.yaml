@@ -1,18 +1,17 @@
 openapi: 3.1.0
 info:
-  title: Guru Plugin API
-  version: 1.0.0
-  description: An API to interact with the Guru plugin hosted on Replit.
+  title: GuruGPT Plugin API
+  description: An API that allows GPT to retrieve answers from the Guru knowledge base.
+  version: "1.0.0"
 
 servers:
   - url: https://guru-plugin-api-csherin.replit.app
-    description: Replit-hosted Guru Plugin API
 
 paths:
   /ask:
     post:
+      summary: Ask a question to Guru
       operationId: askGuru
-      summary: Submit a question to the Guru plugin
       requestBody:
         required: true
         content:
@@ -22,15 +21,36 @@ paths:
               properties:
                 question:
                   type: string
+                  description: The user's question
               required:
                 - question
       responses:
         '200':
-          description: Answer from the Guru plugin
+          description: Successful response from Guru
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   answer:
-                    type: string
+                    type: object
+                    properties:
+                      answerId:
+                        type: string
+                      text:
+                        type: string
+                      sources:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            url:
+                              type: string
+        '400':
+          description: Bad Request — missing question
+        '401':
+          description: Authentication failed
+        '500':
+          description: Internal server error
