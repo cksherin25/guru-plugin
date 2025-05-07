@@ -1,13 +1,12 @@
-openapi: 3.0.1
+openapi: 3.1.0
 info:
-  title: Guru Plugin
-  version: '1.0'
-servers:
-  - url: https://4e1fe55d-c971-4d4f-97a8-e812c89882f8-00-5pvatylk7v0q.picard.replit.dev/
+  title: Ask API
+  version: 1.0.0
 paths:
   /ask:
     post:
-      summary: Ask a question and get an answer from Guru
+      operationId: askSomething
+      summary: Ask a question to the system
       requestBody:
         required: true
         content:
@@ -19,11 +18,11 @@ paths:
                   type: string
       responses:
         '200':
-          description: Answer from Guru
+          description: Answer from the system
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  result:
-                    type: object
+                  answer:
+                    type: string
